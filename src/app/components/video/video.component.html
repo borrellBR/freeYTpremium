@@ -1,0 +1,12 @@
+<div class="video-container">
+  <h1>Enjoy your free youtube!</h1>
+  <h2>Feel free to support with BTC: 3BpsAYZE2dbzGVx5Lt3D3BNLNZxwi2evPt</h2>
+
+  <input type="text" [(ngModel)]="videoUrl" (input)="actualizarVideo()" placeholder="Paste Youtube video URL here..."
+    class="video-input" />
+
+  <div class="video-player" *ngIf="embedUrl">
+    <iframe [src]="embedUrl | safeUrl" width="560" height="315" frameborder="0" allowfullscreen>
+    </iframe>
+  </div>
+</div>
